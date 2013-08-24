@@ -1,0 +1,102 @@
+package entidades;
+
+import java.io.Serializable;
+import java.util.Date;
+
+public class Evento implements Serializable {
+	private String nome;
+	private Ambiente ambiente;
+	private Pessoa[] pessoas;
+	private Date dataEvento;
+	private Date dataCriacao;
+	private int idadeClassificatoria;
+	private String descricao;
+	
+	/**
+	 * Construtor para evento com lista de pessoas
+	 * @param nome
+	 * @param ambiente
+	 * @param pessoas
+	 * @param dataEvento
+	 * @param dataCriacao
+	 * @param idadeClassificatoria
+	 * @param descricao
+	 */
+	
+	public Evento(String nome, Ambiente ambiente, Pessoa[] pessoas, Date dataEvento, Date dataCriacao, int idadeClassificatoria, String descricao) {
+		this.nome = nome.trim();
+		this.ambiente = ambiente;
+		this.pessoas = pessoas;
+		this.dataEvento = dataEvento;
+		this.dataCriacao = dataCriacao;
+		this.idadeClassificatoria = idadeClassificatoria;
+		this.descricao = descricao.trim();
+	}
+	/**
+	 * Construtor para evento livre
+	 * @param nome
+	 * @param ambiente
+	 * @param pessoas
+	 * @param dataEvento
+	 * @param dataCriacao
+	 * @param idadeClassificatoria
+	 * @param descricao
+	 */
+	
+	public Evento(String nome, Ambiente ambiente, Date dataEvento,
+			Date dataCriacao, int idadeClassificatoria, String descricao) {
+		super();
+		this.nome = nome;
+		this.ambiente = ambiente;
+		this.dataEvento = dataEvento;
+		this.dataCriacao = dataCriacao;
+		this.idadeClassificatoria = idadeClassificatoria;
+		this.descricao = descricao;
+	}
+	/**
+	 * @return nome do evento
+	 */
+	public String getNome() {
+		return nome;
+	}
+	/**
+	 * @return ambiente que acontecera o evento
+	 */
+	public Ambiente getAmbiente() {
+		return ambiente;
+	}
+	/**
+	 * @return pessoas que participarao do evento
+	 */
+	public Pessoa[] getPessoas() {
+		return pessoas;
+	}
+	/**
+	 * @return data que ocorrera evento
+	 */
+	public Date getDataEvento() {
+		return dataEvento;
+	}
+	
+	/**
+	 * @return data de criacao do evento
+	 */
+	public Date getDataCriacao() {
+		return dataCriacao;
+	}
+	
+	/**
+	 * @return idade classificatoria do evento
+	 */
+	public int getIdadeClassificatoria() {
+		return idadeClassificatoria;
+	}
+	
+	/**
+	 * @return descricao do evento
+	 */
+	public String getDescricao() {
+		return descricao;
+	}
+	
+}
