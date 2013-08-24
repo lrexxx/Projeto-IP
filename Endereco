@@ -1,0 +1,71 @@
+package entidades;
+
+import java.io.Serializable;
+
+public class Endereco implements Serializable{
+	private String logradouro;
+	private String numero;
+	private String complemento;
+	private String bairro;
+	private String cidade;
+	private String CEP;
+	
+	/**
+	 * Construtor endereco.
+	 * @param logradouro
+	 * @param numero
+	 * @param complemento
+	 * @param bairro
+	 * @param cidade
+	 */
+	public Endereco(String logradouro, String numero, String complemento, String bairro, String cidade, String CEP){
+		this.logradouro = logradouro.trim();
+		this.numero = numero.trim();
+		this.complemento = complemento.trim();
+		this.bairro = bairro.trim();
+		this.cidade = cidade.trim();
+		this.CEP = CEP.trim();
+	}
+	
+	/**
+	 * @return logradouro do endereco
+	 */
+	public String getLogradouro() {
+		return logradouro;
+	}
+	
+	/**
+	 * @return numero do endereco
+	 */
+	public String getNumero() {
+		return numero;
+	}
+
+	/**
+	 * @return complemento do endereco
+	 */
+	public String getComplemento() {
+		return complemento;
+	}
+	
+	/**
+	 * @return bairro do endereco
+	 */
+	public String getBairro() {
+		return bairro;
+	}
+	
+	/**
+	 * @return cidade do endereco
+	 */
+	public String getCidade() {
+		return cidade;
+	}
+
+	/**
+	 * @return CEP do endereco
+	 */
+	public String getCEP() {
+		return CEP;
+	}
+
