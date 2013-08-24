@@ -1,0 +1,46 @@
+package dados;
+
+import java.util.ArrayList;
+
+import entidades.Evento;
+import excecoes.EventoNaoExisteException;
+
+public interface InterfaceRepositorioEvento {
+	/**
+	 * Adiciona evento ao repositorio.
+	 * @param evento
+	 */
+	void adicionar(Evento evento);
+	
+	/**
+	 * @param evento
+	 * @return true caso exista um evento com mesmo nome ou com mesmo id que o do
+	 * evento passado.
+	 */
+	boolean existe(Evento evento);
+	
+	/**
+	 * @param nomeOuId
+	 * @return true caso exista um evento, com:
+	 * ou mesmo nome que o passado; ou mesmo id que o passado. false, caso contrario.
+	 */
+	boolean existe(String nomeOuId);
+	
+	/**
+	 * Remove um evento, caso exista, com mesmo nome, do repositorio.
+	 * @param nome
+	 * @throws EventoNaoExisteException
+	 */
+	void remover(String nome) throws EventoNaoExisteException;
+	
+	/**
+	 * @param nomeOuId
+	 * @return todos os eventos que ou possuem id igual ao passado, ou 
+	 * possuem em seu nome, o campo passado
+	 * @throws EventoNaoExisteException
+	 */
+	ArrayList<Evento> procurar(String nomeOuId) throws EventoNaoExisteException;
+	
+	
+}
+
