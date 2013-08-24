@@ -1,0 +1,45 @@
+package dados;
+import java.util.ArrayList;
+
+import entidades.Pessoa;
+import excecoes.PessoaNaoExisteException;
+
+public interface InterfaceRepositorioPessoa {
+	
+		/**
+		 * Adiciona pessoa ao repositorio.
+		 * @param pessoa
+		 */
+		void adicionar(Pessoa pessoa);
+		
+		/**
+		 * @param pessoa
+		 * @return true caso exista uma pessoa com mesmo telefone ou cpf ou cnpj que o do 
+		 * cliente passado.
+		 */
+		boolean existe(Pessoa pessoa);
+		
+		/**
+		 * @param telefoneOuCPFOuCNPJ
+		 * @return true caso exista uma pessoa, com:
+		 * ou mesmo telefone que o passado; ou mesmo cpf que o passado; 
+		 * ou mesmo cnpj que o passado. False, caso contrario.
+		 */
+		boolean existe(String telefoneOuCPFOuCNPJ);
+		
+		/**
+		 * Remove uma pessoa, caso exista, com mesmo cpf ou cnpj do repositorio.
+		 * @param cpfOuCNPJ
+		 * @throws PessoaNaoExisteException 
+		 */
+		void remover(String cpfOuCNPJ) throws PessoaNaoExisteException;
+		
+		/**
+		 * @param telefoneOuNome
+		 * @return todos as pessoas que ou possuem telefone igual ao passado, ou 
+		 * possuem em seu nome, o campo passado
+		 * @throws PessoaNaoExisteException
+		 */
+		ArrayList<Pessoa> procurar(String telefoneOuNome) throws PessoaNaoExisteException;
+		
+}
