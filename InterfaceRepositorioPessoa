@@ -14,25 +14,25 @@ public interface InterfaceRepositorioPessoa {
 		
 		/**
 		 * @param pessoa
-		 * @return true caso exista uma pessoa com mesmo telefone ou cpf ou cnpj que o do 
-		 * cliente passado.
+		 * @return true caso exista uma pessoa com mesmo telefone ou CPF ou CNPJ que o da 
+		 * pessoa passada.
 		 */
 		boolean existe(Pessoa pessoa);
 		
 		/**
 		 * @param telefoneOuCPFOuCNPJ
 		 * @return true caso exista uma pessoa, com:
-		 * ou mesmo telefone que o passado; ou mesmo cpf que o passado; 
-		 * ou mesmo cnpj que o passado. False, caso contrario.
+		 * ou mesmo CPF que o passado; ou mesmo CNPJ que o passado.
+		 * False, caso contrario.
 		 */
-		boolean existe(String telefoneOuCPFOuCNPJ);
+		boolean existe(String CPFOuCNPJ);
 		
 		/**
 		 * Remove uma pessoa, caso exista, com mesmo cpf ou cnpj do repositorio.
-		 * @param cpfOuCNPJ
+		 * @param CPFOuCNPJ
 		 * @throws PessoaNaoExisteException 
 		 */
-		void remover(String cpfOuCNPJ) throws PessoaNaoExisteException;
+		void remover(String CPFOuCNPJ) throws PessoaNaoExisteException;
 		
 		/**
 		 * @param telefoneOuNome
