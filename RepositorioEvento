@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import entidades.Evento;
 import excecoes.EventoNaoExisteException;
 
-public interface InterfaceRepositorioEvento {
+public interface RepositorioEvento {
 	/**
 	 * Adiciona evento ao repositorio.
 	 * @param evento
